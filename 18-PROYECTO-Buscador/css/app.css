@@ -1,0 +1,199 @@
+body {
+    background: linear-gradient(to right, rgb(175, 230, 239), rgb(119, 207, 228)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Staatliches', cursive;
+}
+html {
+    font-size: 62.5%;
+}
+h1 {
+    font-family: 'Staatliches', cursive;
+    font-size: 6rem;
+    padding: 3rem 0;
+    margin: 0;
+}
+.contenedor {
+    background-color: rgb(202, 231, 230);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+p {
+    font-size: 2rem;
+}
+h1, p {
+    text-align: center;
+}
+form {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem;
+    background: rgb(212, 212, 210);
+    margin-bottom: 10rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#app p{
+    text-align: left!important;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#resultado p {
+    margin: 0;
+    padding: 2rem;
+    border-bottom: 1px solid #040700;
+}
+#resultado p span {
+    font-weight: bold;
+}
+#resultado p:last-of-type{
+    border: none;
+}
+.alerta {
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+}
+.error {
+    background-color: rgb(176, 228, 130);
+}
+
+.sitio-web  {
+    color: white;
+    display: block;
+    font-size: 4rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    text-decoration: none;
+}
+.sitio-web:hover {
+    color: white;
+}
+
+.submenu {
+    position: relative;
+}
+
+
+.submenu #carrito {
+    display: none;
+}
+
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 15%;
+    top: 100%;
+    border: 1px solid #000; /* Borde negro de 1 píxel */
+    z-index: 1;
+    background-color: rgb(212, 212, 210);
+    padding: 20px;
+    min-height: 200px;
+    min-width: 100px;
+}
+
+#vaciar-carrito {
+    display: flexbox;
+    bottom: 0;
+  }
+  #comprar-carrito {
+    display: flexbox;
+    bottom: 0;
+  }
+  .reseña-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reseña-form h2 {
+    text-align: center;
+    color: #333;
+}
+
+.reseña-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.reseña-form input,
+.reseña-form select,
+
+
+.reseña-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.reseña-form textarea {
+    resize: vertical;
+}
+
+.reseña-form input[type="submit"] {
+    background-color: rgb(94, 220, 255);
+    color: #fff;
+    cursor: pointer;
+}
+
+.reseña-form input[type="submit"]:hover {
+    background-color: rgb(57, 231, 185);
+}
+
+
+.reseña-button {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    color: #534c4c;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #000000;
+}
+
+.reseña-button:hover {
+    background-color: rgb(114, 205, 238);
+}
+
+.resena {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.nombre-resena {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.puntuacion-resena {
+    list-style-type: none;
+    font-size: 1rem;
+    color: #333;
+}
+
+.opinion-resena {
+    font-size: 1rem;
+    color: #555;
+}
+
+.ordenar-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ordenar-buttons button {
+    margin-bottom: 10px;
+}

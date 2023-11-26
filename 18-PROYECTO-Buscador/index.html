@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buscador múltiples campos </title>
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">  
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    
+</head>
+<body>
+
+    <h1>Buscador de Coches</h1>
+
+    <div class="contenedor">
+        
+        <form id="buscador">
+            <div class="row">
+                <div class="three columns">
+                    <label for="marca">Marca</label>
+                    <select class="u-full-width" id="marca">
+                        <option value="">Seleccione</option>
+                        <option value="Audi">Audi</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Mercedes Benz">Mercedes Benz</option>
+                        <option value="Chevrolet">Chevrolet</option>
+                        <option value="Ford">Ford</option>
+                        <option value="Dodge">Dodge</option>
+                    </select>
+                </div>
+                <div class="three columns">
+                    <label for="year">Año</label>
+                    <select class="u-full-width" id="year">
+                        <option value="">Seleccione</option>
+                    </select>
+                </div>
+                <div class="three columns">
+                    <label for="minimo">Precio Min</label>
+                    <select class="u-full-width" id="minimo">
+                            <option value="">Seleccione</option>
+                            <option value="20000">20,000</option>
+                            <option value="30000">30,000</option>
+                            <option value="40000">40,000</option>
+                            <option value="50000">50,000</option>
+                            <option value="60000">60,000</option>
+                            <option value="70000">70,000</option>
+                            <option value="80000">80,000</option>
+                            <option value="90000">90,000</option>
+                    </select>
+                </div>
+                <div class="three columns">
+                    <label for="maximo">Precio Max</label>
+                    <select class="u-full-width" id="maximo">
+                            <option value="">Seleccione</option>
+                            <option value="20000">20,000</option>
+                            <option value="30000">30,000</option>
+                            <option value="40000">40,000</option>
+                            <option value="50000">50,000</option>
+                            <option value="60000">60,000</option>
+                            <option value="70000">70,000</option>
+                            <option value="80000">80,000</option>
+                            <option value="90000">90,000</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="four columns">
+                        <label for="puertas">Puertas</label>
+                        <select class="u-full-width" id="puertas">
+                                <option value="">Seleccione</option>
+                                <option value="2">2</option>
+                                <option value="4">4</option>
+                        </select>
+                    </div>
+                    <div class="four columns">
+                        <label for="transmision">Transmisión</label>
+                        <select class="u-full-width" id="transmision">
+                                <option value="">Seleccione</option>
+                                <option value="automatico">Automática</option>
+                                <option value="manual">Manual</option>
+                        </select>
+                    </div>
+                    <div class="four columns">
+                        <label for="color">Color</label>
+                        <select class="u-full-width" id="color">
+                                <option value="">Seleccione</option>
+                                <option value="Negro">Negro</option>
+                                <option value="Azul">Azul</option>
+                                <option value="Blanco">Blanco</option>
+                                <option value="Rojo">Rojo</option>
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+            <br>
+            <br>
+            <br>
+        
+            
+                <div class="four columns u-pull-left">
+                <li class="submenu">
+                        <img src="img/cart.png" id="img-carrito">
+                        <div id="carrito">
+                                
+                                <table id="lista-carrito" class="text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>Imagen</th>
+                                            <th>Marca</th>
+                                            <th>Modelo</th>
+                                            <th>Color</th>
+                                            <th>Precio</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+    
+    
+                                    </tbody>
+                                </table>
+                                
+                                <a href="#" id="vaciar-carrito" class="button u-full-left btn btn-info">Vaciar Carrito</a>
+                                <a href="#" id="comprar-carrito" class="button u-full-left btn btn-danger ">Comprar todo</a>
+                        </div>
+                    </li>
+        
+        </div>
+        <div>
+        <a href="#reseñaFormSection" class="btn btn-info">Ir a Reseñas</a>
+       
+    
+
+        </div>
+        </form>
+
+        <div
+            class="modal fade"
+            id="modal"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1
+                        class="modal-title fs-3 font-bold"
+                        id="staticBackdropLabel">
+                    </h1>
+             
+                    </div>
+                        <div class="modal-body"></div>
+                        <div class="modal-footer flex justify-content-between"></div>
+                </div>
+            </div>
+            
+      </div>
+
+        <h1>Resultados</h1>
+
+        <div class="ordenar-buttons">
+            <button id="btn-ordenar-mayor" class="btn btn-info">Ordenar por Precio (Mayor a Menor Todos los coches)</button>
+            <button id="btn-ordenar-menor" class="btn btn-info">Ordenar por Precio (Menor a Mayor Todos los coches)</button>
+        </div>
+        <div id="resultado"></div>
+        
+
+    </div>
+
+    <div class="reseña-form" id="reseñaFormSection">
+            <h2>Deja una reseña</h2>
+            <br>
+            <h7 style="color: brown;">Todos los campos deben estar completos para poder efectuar la reseña</h7>
+            <form id="reseñaForm">
+                <div class="row">
+                    <div class="six columns">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="six columns">
+                        <label for="calificacion">Calificación</label>
+                        <select id="calificacion" name="calificacion" required>
+                            <option value="5">5 - Excelente</option>
+                            <option value="4">4 - Muy bueno</option>
+                            <option value="3">3 - Bueno</option>
+                            <option value="2">2 - Regular</option>
+                            <option value="1">1 - Malo</option>
+                        </select>
+                    </div>
+                </div>
+                <label for="comentario">Comentario</label>
+                <textarea id="comentario" name="comentario" rows="4" required></textarea>
+                <a href="#" id="btn-envia-reseñas" class="button u-full-left btn btn-info ">Enviar reseña</a>
+                <a href="#" id="btn-volver-arriba" class="button btn btn-info">Volver Arriba</a>
+            </form>
+            <div class="listado-reseñas">
+
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/app1.js"></script>
+    
+    <!-- <script src="js/app2.js"></script>
+    <script src="js/app3.js"></script>
+    <script src="js/app4.js"></script>
+    <script src="js/app5.js"></script>
+    <script src="js/app6.js"></script>
+    <script src="js/app7.js"></script>
+    <script src="js/app8.js"></script>
+    <script src="js/app9.js"></script> -->
+    
+    
+</body>
+</html>
+
